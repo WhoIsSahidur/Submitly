@@ -1,6 +1,8 @@
 # Submitly
 
-Submitly is a full-stack mobile application designed to help college students manage assignments, subjects, and exams efficiently.
+Submitly is a full-stack mobile application designed to help college students manage subjects, assignments, and exams efficiently.
+
+This project is built as an **industry-level portfolio app** using Flutter, NestJS, Prisma, and Supabase.
 
 ---
 
@@ -13,20 +15,63 @@ Submitly is a full-stack mobile application designed to help college students ma
 * Prisma ORM
 * Supabase PostgreSQL
 * GitHub version control
+* REST API integration
 
-### Phase 1 – User System ✅
+---
 
-* Google Sign-In (Firebase)
-* Email & profile retrieved from Google
+### Phase 1 – Authentication ✅
+
+* Firebase Google Sign-In
+* User email & profile retrieved
 * Backend auto user creation (`/users/login`)
-* User session saved locally
-* End-to-end authentication flow working
+* Persistent session (auto login)
+
+---
+
+### Phase 2 – Core MVP Features ✅
+
+#### Navigation
+
+* Bottom Navigation Bar
+* Dashboard
+* Subjects
+* Assignments
+* Exams (placeholder)
+
+---
+
+#### Subjects Module
+
+* Create subject
+* Fetch subjects by user
+* Subject list
+* Stored in Supabase
+
+---
+
+#### Assignments Module
+
+* Create assignment
+* Subject selection (dropdown)
+* Due date picker
+* Fetch assignments
+* Mark as submitted
+* Data persistence
+
+---
+
+#### Dashboard
+
+* Total subjects count
+* Total assignments count
+* Pending assignments
+* Upcoming deadlines overview
 
 ---
 
 ## 🏗️ Architecture
 
-Flutter
+Flutter (Mobile)
 ⬇
 NestJS API
 ⬇
@@ -34,29 +79,22 @@ Prisma ORM
 ⬇
 Supabase PostgreSQL
 ⬇
-Firebase (Google Authentication)
+Firebase Authentication
 
 ---
 
 ## 📁 Project Structure
 
-```
 Submitly/
-│
 ├── mobile_app/        # Flutter application
-│   └── submitly/
-│
 ├── backend_api/       # NestJS backend
-│   └── submitly-api/
-│
 └── README.md
-```
 
 ---
 
 ## ⚙️ Backend Setup
 
-```
+```bash
 cd backend_api/submitly-api
 npm install
 ```
@@ -64,16 +102,16 @@ npm install
 Create `.env`
 
 ```
-DATABASE_URL=your_supabase_pooler_url
+DATABASE_URL=your_supabase_url
 ```
 
-Run:
+Run backend:
 
-```
+```bash
 npm run start:dev
 ```
 
-Server runs at:
+Server:
 
 ```
 http://localhost:3000
@@ -83,7 +121,7 @@ http://localhost:3000
 
 ## 📱 Flutter Setup
 
-```
+```bash
 cd mobile_app/submitly
 flutter pub get
 flutter run
@@ -97,33 +135,11 @@ Android Emulator:
 http://10.0.2.2:3000
 ```
 
-Real Device:
+Physical Device:
 
 ```
 http://YOUR_PC_IP:3000
 ```
-
----
-
-## 🔌 API Endpoints
-
-### Users
-
-POST `/users/login`
-Find or create user
-
-GET `/users?email=...`
-Get user by email
-
----
-
-### Subjects
-
-POST `/subjects`
-Create subject
-
-GET `/subjects?userId=...`
-Get user subjects
 
 ---
 
@@ -136,32 +152,31 @@ Get user subjects
 
 Relationships:
 
-```
 User
- ├── Subjects
- ├── Assignments
- └── Exams
-```
+├── Subjects
+├── Assignments
+└── Exams
 
 ---
 
 ## 🔮 Next Phase
 
-Phase 2 – Core Features
+Phase 3 – Advanced Features
 
-* Subject UI (Flutter)
-* Dashboard
-* Assignment module
-* Exam tracker
+* Exam module
+* Deadline notifications
+* File upload
+* UI improvements
+* Production deployment
 
 ---
 
 ## 👨‍💻 Author
 
-Sahidur Rahman Mondal
+**Sahidur Rahman Mondal**
 
 ---
 
-## ⭐ Goal
+## ⭐ Project Goal
 
-Build an industry-level full-stack mobile application for portfolio and real-world use.
+Build a production-ready full-stack mobile application for portfolio and real-world use.

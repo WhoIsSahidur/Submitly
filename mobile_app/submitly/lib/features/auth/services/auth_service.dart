@@ -3,7 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
-import '../../core/constants/api_constants.dart';
+import '../../../core/constants/api_constants.dart';
 
 class AuthService {
   static bool _initialized = false;
@@ -14,9 +14,7 @@ class AuthService {
 
   static Future<void> _ensureInitialized() async {
     if (!_initialized) {
-      await GoogleSignIn.instance.initialize(
-        serverClientId: _serverClientId,
-      );
+      await GoogleSignIn.instance.initialize(serverClientId: _serverClientId);
       _initialized = true;
     }
   }
@@ -45,6 +43,8 @@ class AuthService {
         // Save session locally
         final prefs = await SharedPreferences.getInstance();
         await prefs.setString('userId', user['id']);
+        await prefs.setString('name', user['name'] ?? name);
+        await prefs.setString('email', user['email'] ?? email);
 
         return user;
       }
@@ -70,6 +70,8 @@ class AuthService {
     try {
       final prefs = await SharedPreferences.getInstance();
       await prefs.remove('userId');
+      await prefs.remove('name');
+      await prefs.remove('email');
 
       await _ensureInitialized();
       await GoogleSignIn.instance.signOut();
