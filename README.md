@@ -1,43 +1,40 @@
 # Submitly
 
-**Submitly** is a full-stack productivity app for college students to manage assignments, subjects, and exams — and never miss a deadline.
+Submitly is a full-stack mobile application designed to help college students manage assignments, subjects, and exams efficiently.
 
 ---
 
-## 🚀 Features (Current)
+## 🚀 Current Status
 
-* User Management (Create & Fetch users)
-* Subject Management (Add & List subjects)
-* REST API with NestJS
-* PostgreSQL Database (Supabase)
+### Phase 0 – Foundation ✅
+
+* Flutter mobile app
+* NestJS backend
 * Prisma ORM
-* Flutter mobile app connected to backend
-* End-to-end working system:
+* Supabase PostgreSQL
+* GitHub version control
 
-Flutter → API → Prisma → Supabase
+### Phase 1 – User System ✅
+
+* Google Sign-In (Firebase)
+* Email & profile retrieved from Google
+* Backend auto user creation (`/users/login`)
+* User session saved locally
+* End-to-end authentication flow working
 
 ---
 
-## 🏗️ Tech Stack
+## 🏗️ Architecture
 
-### Frontend
-
-* Flutter (Dart)
-
-### Backend
-
-* NestJS (Node.js)
-* Prisma ORM
-
-### Database
-
-* PostgreSQL (Supabase)
-
-### Tools
-
-* Git & GitHub
-* REST API
-* Thunder Client / Postman
+Flutter
+⬇
+NestJS API
+⬇
+Prisma ORM
+⬇
+Supabase PostgreSQL
+⬇
+Firebase (Google Authentication)
 
 ---
 
@@ -59,31 +56,24 @@ Submitly/
 
 ## ⚙️ Backend Setup
 
-1. Go to backend folder:
-
 ```
 cd backend_api/submitly-api
-```
-
-2. Install dependencies:
-
-```
 npm install
 ```
 
-3. Create `.env` file:
+Create `.env`
 
 ```
 DATABASE_URL=your_supabase_pooler_url
 ```
 
-4. Run server:
+Run:
 
 ```
 npm run start:dev
 ```
 
-Backend runs at:
+Server runs at:
 
 ```
 http://localhost:3000
@@ -93,36 +83,24 @@ http://localhost:3000
 
 ## 📱 Flutter Setup
 
-1. Go to mobile folder:
-
 ```
 cd mobile_app/submitly
-```
-
-2. Install packages:
-
-```
 flutter pub get
+flutter run
 ```
 
-3. Update API base URL:
+### API Base URL
 
-**Android Emulator**
+Android Emulator:
 
 ```
 http://10.0.2.2:3000
 ```
 
-**Real Device**
+Real Device:
 
 ```
 http://YOUR_PC_IP:3000
-```
-
-4. Run app:
-
-```
-flutter run
 ```
 
 ---
@@ -131,10 +109,10 @@ flutter run
 
 ### Users
 
-POST `/users`
-Create user
+POST `/users/login`
+Find or create user
 
-GET `/users?email=example@test.com`
+GET `/users?email=...`
 Get user by email
 
 ---
@@ -144,14 +122,12 @@ Get user by email
 POST `/subjects`
 Create subject
 
-GET `/subjects?userId=USER_ID`
-Get subjects for a user
+GET `/subjects?userId=...`
+Get user subjects
 
 ---
 
-## 🗄️ Database Schema
-
-Tables:
+## 🗄️ Database Tables
 
 * User
 * Subject
@@ -169,34 +145,23 @@ User
 
 ---
 
-## 📌 Current Status
+## 🔮 Next Phase
 
-✅ Backend connected to Supabase
-✅ Prisma working
-✅ APIs tested (POST & GET)
-✅ Flutter connected to backend
-✅ Data stored in cloud database
+Phase 2 – Core Features
 
----
-
-## 🔮 Upcoming Features
-
-* Google Sign-In
-* User session management
+* Subject UI (Flutter)
+* Dashboard
 * Assignment module
 * Exam tracker
-* File upload
-* Notifications
-* Dashboard UI
 
 ---
 
 ## 👨‍💻 Author
 
-**Sahidur Rahman Mondal**
+Sahidur Rahman Mondal
 
 ---
 
-## ⭐ Project Goal
+## ⭐ Goal
 
-This project is being built as an **industry-level full-stack mobile application** and portfolio project.
+Build an industry-level full-stack mobile application for portfolio and real-world use.

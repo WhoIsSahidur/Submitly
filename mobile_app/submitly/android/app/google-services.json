@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "924059171872",
+    "project_id": "submitly-whoissahidur",
+    "storage_bucket": "submitly-whoissahidur.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:924059171872:android:d0046f4aec8851cd83d045",
+        "android_client_info": {
+          "package_name": "com.whoissahidur.submitly"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "924059171872-2btqpsll6k5b8civ7e97enuterqkhm1l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.whoissahidur.submitly",
+            "certificate_hash": "d3479b973f13e46205f4fe993df58c0566860977"
+          }
+        },
+        {
+          "client_id": "924059171872-5r1h86qnvvo0j8tobbfffoict6o5vh58.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.whoissahidur.submitly",
+            "certificate_hash": "be109a86213d560c88d0db837650f0f2ffa374d7"
+          }
+        },
+        {
+          "client_id": "924059171872-5v7mc6c2ofcvdmn8c22jkjnh5rb1bmoi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.whoissahidur.submitly",
+            "certificate_hash": "072bc4ee3d9f42bd1f4c910dbc470f5056150aab"
+          }
+        },
+        {
+          "client_id": "924059171872-j36791ddc76vj6toqo5vaptvoj7m0jm1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFfABg5nJn7lmC-IIGjFc1o9Qdo2JmrB4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "924059171872-j36791ddc76vj6toqo5vaptvoj7m0jm1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

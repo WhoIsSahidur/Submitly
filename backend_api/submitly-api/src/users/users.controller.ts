@@ -11,6 +11,11 @@ export class UsersController {
     return this.usersService.create(body);
   }
 
+  @Post('login')
+  login(@Body() body: { email: string; name?: string }) {
+    return this.usersService.findOrCreate(body.email, body.name);
+  }
+
   @Get()
   findByEmail(@Query('email') email: string) {
     return this.usersService.findByEmail(email);

@@ -1,4 +1,4 @@
-package com.example.submitly
+package com.whoissahidur.submitly
 
 import io.flutter.embedding.android.FlutterActivity
 
