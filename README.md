@@ -71,24 +71,28 @@ This project is built as an **industry-level portfolio app** using Flutter, Nest
 
 ## 🏗️ Architecture
 
+```
 Flutter (Mobile)
-⬇
+⬇️
 NestJS API
-⬇
+⬇️
 Prisma ORM
-⬇
+⬇️
 Supabase PostgreSQL
-⬇
+⬇️
 Firebase Authentication
+```
 
 ---
 
 ## 📁 Project Structure
 
+```
 Submitly/
 ├── mobile_app/        # Flutter application
 ├── backend_api/       # NestJS backend
 └── README.md
+```
 
 ---
 
@@ -152,10 +156,12 @@ http://YOUR_PC_IP:3000
 
 Relationships:
 
+```
 User
 ├── Subjects
 ├── Assignments
 └── Exams
+```
 
 ---
 
